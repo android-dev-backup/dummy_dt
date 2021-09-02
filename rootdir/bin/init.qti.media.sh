@@ -2,7 +2,7 @@
 #==============================================================================
 #       init.qti.media.sh
 #
-# Copyright (c) 2020, The Linux Foundation. All rights reserved.
+# Copyright (c) 2020-2021, The Linux Foundation. All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions are
@@ -40,12 +40,15 @@ target=`getprop ro.board.platform`
 case "$target" in
    "bengal")
        case "$soc_hwid" in
-           441|471)
+           441|471|473|474)
                setprop vendor.media.target.version 2
                sku_ver=`cat /sys/devices/platform/soc/5a00000.qcom,vidc1/sku_version` 2> /dev/null
                if [ $sku_ver -eq 1 ]; then
                    setprop vendor.media.target.version 3
                fi
+               ;;
+           518)
+               setprop vendor.media.target.version 3
                ;;
            *)
                sku_ver=`cat /sys/devices/platform/soc/5a00000.qcom,vidc/sku_version` 2> /dev/null
