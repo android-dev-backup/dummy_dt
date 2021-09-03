@@ -21,14 +21,14 @@ case "$1" in
         ;;
     "far2near" )
 				playfilename=/vendor/etc/mi_us_whitenoise.wav
-				recfilename=/sdcard/us_far2near.wav
+				recfilename=/data/data/us_far2near.wav
         ;;
     "near2far" )
 				playfilename=/vendor/etc/mi_us_whitenoise.wav
-				recfilename=/sdcard/us_near2far.wav
+				recfilename=/data/data/us_near2far.wav
         ;;
      "cal_wn" )
-				/vendor/bin/mi_ultrasound_test -near /sdcard/us_near2far.wav -far /sdcard/us_far2near.wav
+				/vendor/bin/mi_ultrasound_test -near /data/data/us_near2far.wav -far /data/data/us_far2near.wav
 				if [ -f /sdcard/cal.txt ]; then
 					echo "ultrasound calibration done"
 					sed -n '1p' /sdcard/cal.txt | tee /mnt/vendor/persist/audio/mi_us_cal.txt

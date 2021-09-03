@@ -84,24 +84,40 @@ volume index from 0 to 100.
     <volumeGroup>
         <name>music</name>
         <indexMin>0</indexMin>
-        <indexMax>150</indexMax>
-        <volume deviceCategory="DEVICE_CATEGORY_HEADSET" ref="DEFAULT_MEDIA_VOLUME_CURVE"/>
+        <indexMax>15</indexMax>
+        <volume deviceCategory="DEVICE_CATEGORY_HEADSET">
+            <point>1,-6500</point>
+            <point>13,-5500</point>
+            <point>20,-4800</point>
+            <point>27,-4300</point>
+            <point>33,-3800</point>
+            <point>40,-3400</point>
+            <point>47,-3000</point>
+            <point>53,-2600</point>
+            <point>60,-2200</point>
+            <point>66,-1800</point>
+            <point>73,-1400</point>
+            <point>80,-1050</point>
+            <point>87,-700</point>
+            <point>93,-350</point>
+            <point>100,0</point>
+        </volume>
         <volume deviceCategory="DEVICE_CATEGORY_SPEAKER">
-		  <point>1,-5978</point>
-		  <point>13,-4617</point>
-		  <point>20,-3956</point>
-		  <point>27,-3368</point>
-		  <point>33,-3020</point>
-		  <point>40,-2656</point>
-		  <point>47,-1885</point>
-		  <point>53,-1709</point>
-		  <point>60,-1169</point>
-		  <point>66,-892</point>
-		  <point>73,-514</point>
-		  <point>80,-349</point>
-		  <point>87,-338</point>
-		  <point>93,-260</point>
-		  <point>100,0</point>
+            <point>1,-5678</point>
+            <point>13,-4217</point>
+            <point>20,-3600</point>
+            <point>27,-2930</point>
+            <point>33,-2640</point>
+            <point>40,-2266</point>
+            <point>47,-1860</point>
+            <point>53,-1609</point>
+            <point>60,-1299</point>
+            <point>66,-1042</point>
+            <point>73,-794</point>
+            <point>80,-499</point>
+            <point>87,-338</point>
+            <point>93,-200</point>
+            <point>100,0</point>
         </volume>
         <volume deviceCategory="DEVICE_CATEGORY_EARPIECE" ref="DEFAULT_MEDIA_VOLUME_CURVE"/>
         <volume deviceCategory="DEVICE_CATEGORY_EXT_MEDIA" ref="DEFAULT_MEDIA_VOLUME_CURVE"/>

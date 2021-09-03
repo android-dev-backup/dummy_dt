@@ -8,17 +8,20 @@ echo "enabling main mic"
 audio-factory-test -f enable_main-mic
 
 # start recording
-tinycap /sdcard/rcv2main_mic.wav -r 48000 -b 16 -T 6 && echo "capture done" &
+tinycap /data/data/rcv2main_mic.wav -r 48000 -b 16 -T 4 && echo "capture done" &
 
 
 
-sleep 2
-
+sleep 1
+echo "enabling receiver"
 audio-factory-test -f enable_receiver
 tinyplay /vendor/etc/rcv_seal.wav
 sleep 1
 
 
+echo "disabling main mic"
 audio-factory-test -f disable_main-mic
+
+echo "disabling receiver"
 audio-factory-test -f disable_receiver
 
