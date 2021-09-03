@@ -5,9 +5,11 @@
 -framework/vendor.xiaomi.hardware.misys-V1.0-java.jar
 -framework/vendor.xiaomi.hardware.misys-V2.0-java.jar
 -framework/vendor.xiaomi.hardware.misys.V3_0.jar
--framework/vendor.xiaomi.hardware.mtdservice-V1.2-java.jar
--framework/vendor.xiaomi.hardware.otrpagent-V2.0-java.jar
+-framework/vendor.xiaomi.hardware.mtdservice-V1.0-java.jar
+-framework/vendor.xiaomi.hardware.mtdservice-V1.1-java.jar
 -framework/vendor.xiaomi.hardware.vsimapp-V1.0-java.jar
+-product/priv-app/HotwordEnrollmentOKGoogleHEXAGON/HotwordEnrollmentOKGoogleHEXAGON.apk
+-product/priv-app/HotwordEnrollmentXGoogleHEXAGON/HotwordEnrollmentXGoogleHEXAGON.apk
 -system_ext/app/ConfURIDialer/ConfURIDialer.apk
 -system_ext/app/DeviceInfo/DeviceInfo.apk
 -system_ext/app/DeviceStatisticsService/DeviceStatisticsService.apk
@@ -37,6 +39,7 @@
 -system_ext/app/xdivert/xdivert.apk
 -system_ext/framework/ActivityExt.jar
 -system_ext/framework/audiosphere.jar
+-system_ext/framework/com.android.hotwordenrollment.common.util.jar
 -system_ext/framework/com.qti.dpmframework.jar
 -system_ext/framework/com.qti.location.sdk.jar
 -system_ext/framework/com.qti.media.secureprocessor.jar
@@ -99,11 +102,13 @@
 -system_ext/framework/wigig-service.jar
 -system_ext/priv-app/CarrierConfig/CarrierConfig.apk
 -system_ext/priv-app/EmergencyInfo/EmergencyInfo.apk
+-system_ext/priv-app/GoogleFeedback/GoogleFeedback.apk
 -system_ext/priv-app/GoogleOneTimeInitializer/GoogleOneTimeInitializer.apk
 -system_ext/priv-app/GoogleServicesFramework/GoogleServicesFramework.apk
 -system_ext/priv-app/MiuiSystemUI/MiuiSystemUI.apk
 -system_ext/priv-app/QAS_DVC_MSP/QAS_DVC_MSP.apk
 -system_ext/priv-app/Settings/Settings.apk
+-system_ext/priv-app/SetupWizard/SetupWizard.apk
 -system_ext/priv-app/StorageManager/StorageManager.apk
 -system_ext/priv-app/WallpaperCropper/WallpaperCropper.apk
 -system_ext/priv-app/WfdService/WfdService.apk
@@ -117,8 +122,8 @@ etc/permissions/privapp-permissions-qti.xml
 etc/permissions/vendor.xiaomi.hardware.misys-V1.0-java-permission.xml
 etc/permissions/vendor.xiaomi.hardware.misys-V2.0-java-permission.xml
 etc/permissions/vendor.xiaomi.hardware.misys.V3_0-permission.xml
-etc/permissions/vendor.xiaomi.hardware.mtdservice-V1.2-java-permission.xml
-etc/permissions/vendor.xiaomi.hardware.otrpagent-V2.0-java-permission.xml
+etc/permissions/vendor.xiaomi.hardware.mtdservice-V1.0-java-permission.xml
+etc/permissions/vendor.xiaomi.hardware.mtdservice-V1.1-java-permission.xml
 etc/permissions/vendor.xiaomi.hardware.vsimapp-V1.0-java-permission.xml
 etc/sysconfig/qti_whitelist.xml
 lib/vendor.xiaomi.hardware.campostproc@1.0.so
@@ -185,6 +190,7 @@ system_ext/etc/permissions/android.software.verified_boot.xml
 system_ext/etc/permissions/audiosphere.xml
 system_ext/etc/permissions/com.android.carrierconfig.xml
 system_ext/etc/permissions/com.android.emergency.xml
+system_ext/etc/permissions/com.android.hotwordenrollment.common.util.xml
 system_ext/etc/permissions/com.android.settings.xml
 system_ext/etc/permissions/com.android.storagemanager.xml
 system_ext/etc/permissions/com.android.systemui.xml
