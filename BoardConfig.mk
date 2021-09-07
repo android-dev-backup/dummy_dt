@@ -2,7 +2,7 @@ DEVICE_PATH := device/xiaomi/alioth
 BOARD_VENDOR := xiaomi
 
 # Security patch level
-VENDOR_SECURITY_PATCH := 2021-03-01
+VENDOR_SECURITY_PATCH := 2021-08-01
 
 # HIDL
 DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/manifest.xml
@@ -26,6 +26,7 @@ DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/manifest.xml
 DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/manifest_android.hardware.drm@1.3-service.clearkey.xml
 DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/manifest_android.hardware.drm@1.3-service.widevine.xml
 DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/manifest_fpc.xml
+DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/manifest_vendor.dolby.hardware.dms.xml
 DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/manifest_vendor.xiaomi.hardware.antdtx.xml
 DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/manifest_vendor.xiaomi.hardware.mfidoca.xml
 DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/manifest_vendor.xiaomi.hardware.mlipay.xml

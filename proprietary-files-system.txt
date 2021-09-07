@@ -105,6 +105,7 @@
 -system_ext/priv-app/GoogleFeedback/GoogleFeedback.apk
 -system_ext/priv-app/GoogleOneTimeInitializer/GoogleOneTimeInitializer.apk
 -system_ext/priv-app/GoogleServicesFramework/GoogleServicesFramework.apk
+-system_ext/priv-app/MiuiSystemUI/MiuiSystemUI.apk
 -system_ext/priv-app/QAS_DVC_MSP/QAS_DVC_MSP.apk
 -system_ext/priv-app/Settings/Settings.apk
 -system_ext/priv-app/SetupWizard/SetupWizard.apk
@@ -192,6 +193,7 @@ system_ext/etc/permissions/com.android.emergency.xml
 system_ext/etc/permissions/com.android.hotwordenrollment.common.util.xml
 system_ext/etc/permissions/com.android.settings.xml
 system_ext/etc/permissions/com.android.storagemanager.xml
+system_ext/etc/permissions/com.android.systemui.xml
 system_ext/etc/permissions/com.qti.dpmframework.xml
 system_ext/etc/permissions/com.qti.location.sdk.xml
 system_ext/etc/permissions/com.qti.media.secureprocessor.xml
@@ -292,7 +294,9 @@ system_ext/lib/libhoaeffects_csim.so
 system_ext/lib/libimscamera_jni.so
 system_ext/lib/libimsmedia_jni.so
 system_ext/lib/libjnihelpers.so
+system_ext/lib/libjpgt.so
 system_ext/lib/liblayerext.qti.so
+system_ext/lib/liblept.so
 system_ext/lib/liblistenjni.qti.so
 system_ext/lib/liblistensoundmodel2.qti.so
 system_ext/lib/libmdsprpc_system.so
@@ -305,6 +309,7 @@ system_ext/lib/libmmparser_lite.so
 system_ext/lib/libmmrtpdecoder.so
 system_ext/lib/libmmrtpencoder.so
 system_ext/lib/liboemaids_system.so
+system_ext/lib/libpngt.so
 system_ext/lib/libqcc.so
 system_ext/lib/libqcc_file_agent_sys.so
 system_ext/lib/libqct_resampler.so
@@ -340,6 +345,7 @@ system_ext/lib/libsensor_calibration.so
 system_ext/lib/libskewknob_system.so
 system_ext/lib/libsmomo.qti.so
 system_ext/lib/libsystemhelper_jni.so
+system_ext/lib/libtess.so
 system_ext/lib/libtrigger-handler.so
 system_ext/lib/libupdateprof.qti.so
 system_ext/lib/libvndfwk_detect_jni.qti.so
@@ -539,7 +545,9 @@ system_ext/lib64/libhoaeffects_csim.so
 system_ext/lib64/libimscamera_jni.so
 system_ext/lib64/libimsmedia_jni.so
 system_ext/lib64/libjnihelpers.so
+system_ext/lib64/libjpgt.so
 system_ext/lib64/liblayerext.qti.so
+system_ext/lib64/liblept.so
 system_ext/lib64/liblistenjni.qti.so
 system_ext/lib64/liblistensoundmodel2.qti.so
 system_ext/lib64/libmdsprpc_system.so
@@ -559,6 +567,7 @@ system_ext/lib64/libmmrtpdecoder.so
 system_ext/lib64/libmmrtpencoder.so
 system_ext/lib64/libmsp.so
 system_ext/lib64/liboemaids_system.so
+system_ext/lib64/libpngt.so
 system_ext/lib64/libqcc.so
 system_ext/lib64/libqcc_file_agent_sys.so
 system_ext/lib64/libqdMetaData.so
@@ -588,6 +597,7 @@ system_ext/lib64/libsecureuisvc_jni.so
 system_ext/lib64/libskewknob_system.so
 system_ext/lib64/libsmomo.qti.so
 system_ext/lib64/libsystemhelper_jni.so
+system_ext/lib64/libtess.so
 system_ext/lib64/libtrigger-handler.so
 system_ext/lib64/libupdateprof.qti.so
 system_ext/lib64/libvndfwk_detect_jni.qti.so
@@ -720,6 +730,10 @@ system_ext/lib64/vendor.qti.latency@2.0.so
 system_ext/lib64/vendor.qti.qspmhal@1.0.so
 system_ext/lib64/vendor.qti.voiceprint@1.0.so
 system_ext/lib64/vendor.xiaomi.hardware.fingerprintextension@1.0.so
+system_ext/priv-app/Settings/lib/arm64/libjpgt.so
+system_ext/priv-app/Settings/lib/arm64/liblept.so
+system_ext/priv-app/Settings/lib/arm64/libpngt.so
+system_ext/priv-app/Settings/lib/arm64/libtess.so
 system_ext/priv-app/WfdService/lib/arm64/libwfdnative.so
 system_ext/priv-app/ims/lib/arm64/libimscamera_jni.so
 system_ext/priv-app/ims/lib/arm64/libimsmedia_jni.so
