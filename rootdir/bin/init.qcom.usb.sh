@@ -59,9 +59,22 @@ if [ "$(getprop persist.vendor.usb.config)" == "" -a "$(getprop ro.build.type)" 
 	if [ "$esoc_name" == "" ]; then
 	#setprop persist.vendor.usb.config adb
 		case "$soc_hwplatform" in
-			"ALIOTH")
+			"ALIOTH" | "PSYCHE" | "POUSSIN")
 				if [ "$(getprop ro.boot.factorybuild)" == "1" ]; then
 					setprop persist.vendor.usb.config diag,diag_mdm,qdss,qdss_mdm,serial_cdev,dpl,rmnet,adb
+				elif [ "$buildvariant" = "eng" ]; then
+					setprop persist.vendor.usb.config diag,diag_mdm,qdss,qdss_mdm,serial_cdev,dpl,rmnet,adb
+				else
+					if [ -z "$debuggable" -o "$debuggable" = "1"  ]; then
+						setprop persist.vendor.usb.config adb
+					else
+						setprop persist.vendor.usb.config none
+					fi
+				fi
+			;;
+			"ELISH")
+				if [ "$(getprop ro.boot.factorybuild)" == "1" ]; then
+					setprop persist.vendor.usb.config diag,adb
 				elif [ "$buildvariant" = "eng" ]; then
 					setprop persist.vendor.usb.config diag,diag_mdm,qdss,qdss_mdm,serial_cdev,dpl,rmnet,adb
 				else
@@ -85,19 +98,42 @@ if [ "$(getprop persist.vendor.usb.config)" == "" -a "$(getprop ro.build.type)" 
 					fi
 				fi
 			;;
+			"NABU")
+				if [ "$(getprop ro.boot.factorybuild)" == "1" ]; then
+					setprop persist.vendor.usb.config diag,adb
+				elif [ "$buildvariant" = "eng" ]; then
+					setprop persist.vendor.usb.config diag,adb
+				else
+					if [ -z "$debuggable" -o "$debuggable" = "1"  ]; then
+						setprop persist.vendor.usb.config adb
+					else
+						setprop persist.vendor.usb.config none
+					fi
+				fi
+			;;
 		esac
 
 	else
 		case "$(getprop ro.baseband)" in
 			"apq")
-				setprop persist.vendor.usb.config diag,adb
+				if [ "$(getprop ro.boot.factorybuild)" == "1" ]; then
+					setprop persist.vendor.usb.config diag,adb
+				elif [ "$buildvariant" = "eng" ]; then
+					setprop persist.vendor.usb.config diag,adb
+				else
+					if [ -z "$debuggable" -o "$debuggable" = "1"  ]; then
+						setprop persist.vendor.usb.config adb
+					else
+						setprop persist.vendor.usb.config none
+					fi
+				fi
 			;;
 		*)
 		case "$soc_hwplatform" in
 			"Dragon" | "SBC")
 				setprop persist.vendor.usb.config diag,adb
 			;;
-			"CMI" | "UMI" | "PICASSO" | "MONET" | "VANGOGH" | "LMI" | "COURBET" | "SWEET" | "ALIOTH" | "THYME" | "VAYU")
+			"CMI" | "UMI" | "PICASSO" | "MONET" | "VANGOGH" | "LMI" | "COURBET" | "SWEET" | "ALIOTH" | "THYME" | "VAYU" | "ENUMA" | "NABU" | "PSYCHE"| "POUSSIN")
 				if [ "$(getprop ro.boot.factorybuild)" == "1" ]; then
 					setprop persist.vendor.usb.config diag,diag_mdm,qdss,qdss_mdm,serial_cdev,dpl,rmnet,adb
 				elif [ "$buildvariant" = "eng" ]; then

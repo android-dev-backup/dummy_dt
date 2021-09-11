@@ -17,7 +17,7 @@ PRODUCT_MODEL := M2012K11AC
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 TARGET_VENDOR := xiaomi
 TARGET_VENDOR_PRODUCT_NAME := alioth
-PRODUCT_BUILD_PROP_OVERRIDES += PRIVATE_BUILD_DESC="qssi-user 11 RKQ1.200826.002 V12.5.3.0.RKHMIXM release-keys"
+PRODUCT_BUILD_PROP_OVERRIDES += PRIVATE_BUILD_DESC="qssi-user 11 RKQ1.200826.002 21.9.8 release-keys"
 
 # Set BUILD_FINGERPRINT variable to be picked up by both system and vendor build.prop
-BUILD_FINGERPRINT := qti/qssi/qssi:11/RKQ1.200826.002/V12.5.3.0.RKHMIXM:user/release-keys
+BUILD_FINGERPRINT := qti/qssi/qssi:11/RKQ1.200826.002/21.9.8:user/release-keys

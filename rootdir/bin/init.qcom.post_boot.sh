@@ -673,7 +673,7 @@ function configure_memory_parameters() {
     ProductName=`getprop ro.product.name`
     low_ram=`getprop ro.config.low_ram`
 
-    if [ "$ProductName" == "msmnile" ] || [ "$ProductName" == "kona" ] || [ "$ProductName" == "sdmshrike_au" ] || [ "$ProductName" == "alioth" ] ; then
+    if [ "$ProductName" == "msmnile" ] || [ "$ProductName" == "kona" ] || [ "$ProductName" == "sdmshrike_au" ] || [ "$ProductName" == "alioth" ]; then
         # Enable ZRAM
         configure_zram_parameters
         configure_read_ahead_kb_values
@@ -3545,7 +3545,7 @@ case "$target" in
         echo 1 > /proc/sys/kernel/sched_conservative_pl
 
         # enable input boost
-        echo 1 > /sys/devices/system/cpu/cpu_boost/sched_boost_on_input
+        echo 2 > /sys/devices/system/cpu/cpu_boost/sched_boost_on_input
         echo "0:1516800" > /sys/devices/system/cpu/cpu_boost/input_boost_freq
         echo 120 > /sys/devices/system/cpu/cpu_boost/input_boost_ms
         echo 1 > /sys/devices/system/cpu/cpu_boost/sched_boost_on_powerkey_input
@@ -3713,7 +3713,7 @@ case "$target" in
         # Enable conservative pl
         echo 1 > /proc/sys/kernel/sched_conservative_pl
 
-        echo 1 > /sys/devices/system/cpu/cpu_boost/sched_boost_on_input
+        echo 2 > /sys/devices/system/cpu/cpu_boost/sched_boost_on_input
         echo "0:1516800" > /sys/devices/system/cpu/cpu_boost/input_boost_freq
         echo 120 > /sys/devices/system/cpu/cpu_boost/input_boost_ms
         echo 1 > /sys/devices/system/cpu/cpu_boost/sched_boost_on_powerkey_input
@@ -5276,10 +5276,10 @@ case "$target" in
 	echo 1 > /sys/devices/system/cpu/cpufreq/policy0/schedutil/pl
 
 	# configure input boost settings
-	echo "0:1324800" > /sys/devices/system/cpu/cpu_boost/input_boost_freq
+	echo "0:1612800" > /sys/devices/system/cpu/cpu_boost/input_boost_freq
 	echo 120 > /sys/devices/system/cpu/cpu_boost/input_boost_ms
-        echo "0:0 1:0 2:0 3:0 4:2342400 5:0 6:0 7:2361600" > /sys/devices/system/cpu/cpu_boost/powerkey_input_boost_freq
-        echo 400 > /sys/devices/system/cpu/cpu_boost/powerkey_input_boost_ms
+	echo "0:1804800 1:0 2:0 3:0 4:2419200 5:0 6:0 7:2841600" > /sys/devices/system/cpu/cpu_boost/powerkey_input_boost_freq
+	echo 400 > /sys/devices/system/cpu/cpu_boost/powerkey_input_boost_ms
 
 	# configure governor settings for gold cluster
 	echo "schedutil" > /sys/devices/system/cpu/cpufreq/policy4/scaling_governor
