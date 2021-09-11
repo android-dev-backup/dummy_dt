@@ -332,12 +332,6 @@ vendor/lib64/libcvp_common.so
 vendor/lib64/vendor.qti.hardware.cvp@1.0.so
 
 # Camera
-vendor/app/MiGameService/lib/arm64/libsnpe_dsp_domains_v2_mitime.so
-vendor/app/MiGameService/lib/arm64/libsnpe_dsp_domains_v3_mitime.so
-vendor/app/MiGameService/lib/arm64/libsnpe_dsp_v65_domains_v2_skel_mitime.so
-vendor/app/MiGameService/lib/arm64/libsnpe_dsp_v66_domains_v2_skel_mitime.so
-vendor/app/MiGameService/lib/arm64/libsnpe_dsp_v68_domains_v3_skel_mitime.so
-vendor/app/MiGameService/lib/arm64/libSNPE_mitime.so
 vendor/etc/camera/mibokeh_855_opencl.bin
 vendor/etc/camera/mibokeh_855_parameter.bin
 vendor/etc/camera/model_front_mibokeh_video.dlc
@@ -1606,6 +1600,10 @@ vendor/lib64/libsdm-diag.so
 vendor/lib64/libsdm-disp-vndapis.so
 vendor/lib64/libtinyxml2_1.so
 
+# HotwordEnrollment
+-product/priv-app/HotwordEnrollmentOKGoogleHEXAGON/HotwordEnrollmentOKGoogleHEXAGON.apk
+-product/priv-app/HotwordEnrollmentXGoogleHEXAGON/HotwordEnrollmentXGoogleHEXAGON.apk
+
 # IPA-Firmware
 vendor/firmware/ipa_fws.b00
 vendor/firmware/ipa_fws.b01
@@ -2764,6 +2762,11 @@ vendor/etc/tunings.txt
 # Misc
 -system_ext/app/atfwd/atfwd.apk
 -system_ext/app/colorservice/colorservice.apk
+-system_ext/app/com.paservices/com.paservices.apk
+system_ext/app/com.paservices/lib/arm64/libjni_resource_drm.so
+system_ext/app/com.paservices/lib/arm64/libmiuiblursdk.so
+system_ext/app/com.paservices/lib/arm64/libmiuidiffpatcher.so
+system_ext/app/com.paservices/lib/arm64/libsdk_patcher_jni.so
 -system_ext/app/com.qualcomm.qti.services.secureui/com.qualcomm.qti.services.secureui.apk
 -system_ext/app/com.qualcomm.qti.services.systemhelper/com.qualcomm.qti.services.systemhelper.apk
 system_ext/app/com.qualcomm.qti.services.systemhelper/lib/arm64/libsystemhelper_jni.so
@@ -2816,9 +2819,11 @@ system_ext/etc/init/vendor.qti.hardware.qccsyshal@1.0-service.rc
 system_ext/etc/permissions/android.software.verified_boot.xml
 system_ext/etc/permissions/com.android.carrierconfig.xml
 system_ext/etc/permissions/com.android.emergency.xml
+system_ext/etc/permissions/com.android.hotwordenrollment.common.util.xml
 system_ext/etc/permissions/com.android.settings.xml
 system_ext/etc/permissions/com.android.storagemanager.xml
 system_ext/etc/permissions/com.android.systemui.xml
+system_ext/etc/permissions/com.google.android.gsf.xml
 system_ext/etc/permissions/com.qti.media.secureprocessor.xml
 system_ext/etc/permissions/com.qualcomm.qmapbridge.xml
 system_ext/etc/permissions/com.qualcomm.qti.izattools.xml
@@ -2857,6 +2862,7 @@ system_ext/etc/seccomp_policy/wfdservice.policy
 system_ext/etc/spn-conf.xml
 system_ext/etc/sysconfig/qti_whitelist_system_ext.xml
 -system_ext/framework/ActivityExt.jar
+-system_ext/framework/com.android.hotwordenrollment.common.util.jar
 -system_ext/framework/com.qti.media.secureprocessor.jar
 -system_ext/framework/qmapbridge.jar
 -system_ext/framework/qti-telephony-hidl-wrapper.jar
@@ -3181,10 +3187,8 @@ system_ext/lib64/vendor.qti.hardware.wigig.netperftuner@1.0.so
 system_ext/lib64/vendor.qti.hardware.wigig.supptunnel@1.0.so
 system_ext/lib64/vendor.qti.qspmhal@1.0.so
 system_ext/lib64/vendor.qti.voiceprint@1.0.so
--system_ext/priv-app/beyondGnssService/beyondGnssService.apk
 -system_ext/priv-app/CarrierConfig/CarrierConfig.apk
 -system_ext/priv-app/EmergencyInfo/EmergencyInfo.apk
--system_ext/priv-app/GoogleOneTimeInitializer/GoogleOneTimeInitializer.apk
 -system_ext/priv-app/GoogleServicesFramework/GoogleServicesFramework.apk
 system_ext/priv-app/ims/lib/arm64/libimscamera_jni.so
 system_ext/priv-app/ims/lib/arm64/libimsmedia_jni.so
@@ -3196,15 +3200,14 @@ system_ext/priv-app/Settings/lib/arm64/liblept.so
 system_ext/priv-app/Settings/lib/arm64/libpngt.so
 system_ext/priv-app/Settings/lib/arm64/libtess.so
 -system_ext/priv-app/Settings/Settings.apk
+system_ext/priv-app/SetupWizard/lib/arm64/libbarhopper.so
+-system_ext/priv-app/SetupWizard/SetupWizard.apk
 -system_ext/priv-app/StorageManager/StorageManager.apk
 -system_ext/priv-app/WallpaperCropper/WallpaperCropper.apk
 -vendor/app/CACertService/CACertService.apk
 -vendor/app/com.qualcomm.qti.gpudrivers.kona.api30/com.qualcomm.qti.gpudrivers.kona.api30.apk
 -vendor/app/EidService/EidService.apk
 -vendor/app/IconShapeOverlay/IconShapeOverlay.apk
-vendor/app/MiGameService/lib/arm64/libc++_shared_mitime.so
-vendor/app/MiGameService/lib/arm64/libhta_mitime.so
--vendor/app/MiGameService/MiGameService.apk
 -vendor/app/NotchOverlay/NotchOverlay.apk
 -vendor/app/SensorTestTool/SensorTestTool.apk
 vendor/bin/adpl
@@ -3325,12 +3328,6 @@ vendor/bin/xtwifi-client
 vendor/bin/xtwifi-inet-agent
 vendor/build_pro.prop
 vendor/build_std.prop
--vendor/data-app/BaiduIME/BaiduIME.apk
--vendor/data-app/com.iflytek.inputmethod.miui/com.iflytek.inputmethod.miui.apk
--vendor/data-app/Health/Health.apk
--vendor/data-app/SmartHome/SmartHome.apk
--vendor/data-app/wps-lite/wps-lite.apk
--vendor/data-app/XMRemoteController/XMRemoteController.apk
 vendor/etc/audio-test-config
 vendor/etc/charger_fstab.qti
 vendor/etc/cirrus.cfg
@@ -3345,7 +3342,6 @@ vendor/etc/device_features/aliothin.xml
 vendor/etc/excluded-input-devices.xml
 vendor/etc/face3d/qcnn_concat_file_model-0324_2_encrypted
 vendor/etc/FM_CAM.bin
-vendor/etc/ForceDarkAppConfig.json
 vendor/etc/ftm_test_config_kona-qrd-snd-card
 vendor/etc/gpfspath_oem_config.xml
 vendor/etc/gps_diag.cfg
