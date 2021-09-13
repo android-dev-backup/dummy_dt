@@ -7,7 +7,6 @@
 -framework/vendor.xiaomi.hardware.misys.V3_0.jar
 -framework/vendor.xiaomi.hardware.mtdservice-V1.0-java.jar
 -framework/vendor.xiaomi.hardware.mtdservice-V1.1-java.jar
--framework/vendor.xiaomi.hardware.vsimapp-V1.0-java.jar
 -product/priv-app/HotwordEnrollmentOKGoogleHEXAGON/HotwordEnrollmentOKGoogleHEXAGON.apk
 -product/priv-app/HotwordEnrollmentXGoogleHEXAGON/HotwordEnrollmentXGoogleHEXAGON.apk
 -system_ext/app/ConfURIDialer/ConfURIDialer.apk
@@ -124,7 +123,6 @@ etc/permissions/vendor.xiaomi.hardware.misys-V2.0-java-permission.xml
 etc/permissions/vendor.xiaomi.hardware.misys.V3_0-permission.xml
 etc/permissions/vendor.xiaomi.hardware.mtdservice-V1.0-java-permission.xml
 etc/permissions/vendor.xiaomi.hardware.mtdservice-V1.1-java-permission.xml
-etc/permissions/vendor.xiaomi.hardware.vsimapp-V1.0-java-permission.xml
 etc/sysconfig/qti_whitelist.xml
 lib/vendor.xiaomi.hardware.campostproc@1.0.so
 lib/vendor.xiaomi.hardware.citsensorservice@1.0.so

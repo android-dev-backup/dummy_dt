@@ -2300,14 +2300,12 @@ etc/permissions/vendor.xiaomi.hardware.misys-V2.0-java-permission.xml
 etc/permissions/vendor.xiaomi.hardware.misys.V3_0-permission.xml
 etc/permissions/vendor.xiaomi.hardware.mtdservice-V1.0-java-permission.xml
 etc/permissions/vendor.xiaomi.hardware.mtdservice-V1.1-java-permission.xml
-etc/permissions/vendor.xiaomi.hardware.vsimapp-V1.0-java-permission.xml
 -framework/vendor.xiaomi.hardware.campostproc-V1.0-java.jar
 -framework/vendor.xiaomi.hardware.misys-V1.0-java.jar
 -framework/vendor.xiaomi.hardware.misys-V2.0-java.jar
 -framework/vendor.xiaomi.hardware.misys.V3_0.jar
 -framework/vendor.xiaomi.hardware.mtdservice-V1.0-java.jar
 -framework/vendor.xiaomi.hardware.mtdservice-V1.1-java.jar
--framework/vendor.xiaomi.hardware.vsimapp-V1.0-java.jar
 lib/vendor.xiaomi.hardware.campostproc@1.0.so
 lib/vendor.xiaomi.hardware.citsensorservice@1.0.so
 lib/vendor.xiaomi.hardware.citsensorservice@1.1.so
@@ -3274,6 +3272,7 @@ vendor/lib/libqcrildatactl.so
 vendor/lib/libqdma_file_agent.so
 vendor/lib/libqti_vndfwk_detect.so
 vendor/lib/librecovery_updater.so
+vendor/lib/libresampler.so
 vendor/lib/libril-qc-logger.so
 vendor/lib/libskewknob.so
 vendor/lib/libsmemlog.so
@@ -3510,6 +3509,7 @@ vendor/lib64/libqti_vndfwk_detect.so
 vendor/lib64/librecovery_updater.so
 vendor/lib64/libreffeature.so
 vendor/lib64/librelight_only.so
+vendor/lib64/libresampler.so
 vendor/lib64/libril-qc-logger.so
 vendor/lib64/libsdk_sr.so
 vendor/lib64/libskewknob.so
